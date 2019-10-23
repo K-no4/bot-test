@@ -18,6 +18,7 @@ function respond()
           postHelp();
           this.res.end();
           break;
+        case ''
         default:
         console.log("unkown response");
         this.res.writeHead(200);
@@ -119,7 +120,7 @@ function postAnouncement(){
   botReq.end(JSON.stringify(body));
 }
 
-function posthelp(){
+function postHelp(){
   var botResponse, options, body, botReq;
 
 
@@ -155,7 +156,7 @@ function posthelp(){
   botReq.end(JSON.stringify(body));
 }
 
-function posthelp(){
+function postError(){
   var botResponse, options, body, botReq;
 
 
