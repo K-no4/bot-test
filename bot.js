@@ -18,7 +18,6 @@ function respond()
           postHelp();
           this.res.end();
           break;
-        case ''
         default:
         console.log("unkown response");
         this.res.writeHead(200);
