@@ -65,7 +65,7 @@ function postMessage() {
       } else {
         console.log('rejecting bad status code ' + res.statusCode);
       }
-  });
+  }
 
   botReq.on('error', function(err) {
     console.log('error posting message '  + JSON.stringify(err));
