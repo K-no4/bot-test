@@ -3,10 +3,24 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-function respond() {
+function respond() 
+{
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/list$/;
+      botRegex = request.text;
+      switch (botRegex){
+        case "/t":
+          this.res.writeHead(200);
+          postAnouncement();
+          this.res.end();
+          break;
+        default:
+        console.log("unkown response");
+        this.res.writeHead(200);
+        this.res.end();
 
+      }
+
+/*
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
@@ -14,14 +28,23 @@ function respond() {
   } else {
     console.log("don't care");
     this.res.writeHead(200);
-    this.res.end();
+    this.res.end(); 
   }
 }
+*/
+
+/*function message(x,y) 
+{
+  var x, y;
+
+
+}
+*/
 
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "This is a test";
+  botResponse = cool();
 
   options = {
     hostname: 'api.groupme.com',
