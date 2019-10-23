@@ -21,7 +21,6 @@ function respond()
         default:
         console.log("unkown response");
         this.res.writeHead(200);
-        postError();
         this.res.end();
 
       }
