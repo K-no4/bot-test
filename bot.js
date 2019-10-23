@@ -6,7 +6,8 @@ var botID = process.env.BOT_ID;
 function respond() 
 {
   var request = JSON.parse(this.req.chunks[0]),
-      switch (request.text){
+  var msg=request.text;
+      switch (msg){
         case "/t":
           this.res.writeHead(200);
           postAnouncement();
