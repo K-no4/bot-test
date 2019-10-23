@@ -5,8 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() 
 {
-  var request = JSON.parse(this.req.chunks[0]),
-  var msg; 
+  var msg, request = JSON.parse(this.req.chunks[0]),
   msg=request.text;
       switch (msg){
         case '/t':
