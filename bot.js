@@ -18,6 +18,11 @@ function respond()
           postHelp();
           this.res.end();
           break;
+        case '69':
+          this.res.writeHead(200);
+          postCringe();
+          this.res.end();
+          break
         default:
         console.log("unkown response");
         this.res.writeHead(200);
@@ -98,11 +103,12 @@ function postHelp(){
   botReq.end(JSON.stringify(body));
 }
 
-function postError(){
-  var botResponse, options, body, botReq;
+function postCringe()
+{
+    var botResponse, options, body, botReq;
 
 
-  botResponse = "Unkown command use /help for list of commands";
+  botResponse = "Nice";
 
     options = {
     hostname: 'api.groupme.com',
@@ -115,6 +121,24 @@ function postError(){
     "text" : botResponse
   };
 
+  console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
   console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
