@@ -3,8 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-function respond() 
-{
+function respond() {
   var msg, request = JSON.parse(this.req.chunks[0]),
   msg=request.text;
       switch (msg){
@@ -20,9 +19,13 @@ function respond()
           break;
           case '69':
           this.res.writeHead(200);
-          postCringe();
+          postCringe(1);
           this.res.end();
-          break
+          break;
+          case 'no':
+          this.res.writeHead(200);
+          postCringe(2);
+          this.res.end();
         default:
         console.log("unkown response");
         this.res.writeHead(200);
@@ -103,12 +106,21 @@ function postHelp(){
   botReq.end(JSON.stringify(body));
 }
 
-function postCringe(){
-  var botResponse, options, body, botReq;
+function postCringe(txt){
+  var txt, botResponse, options, body, botReq;
 
 
-  botResponse = "Nice";
-
+    switch (txt)
+    {
+      case 1:
+        botResponse="words 1";
+      break;
+      case 2:
+        botResponse="words 2";
+      break;
+      default:
+      break;
+    }
     options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -138,4 +150,8 @@ function postCringe(){
   });
   botReq.end(JSON.stringify(body));
 }
+
+
+
+
 exports.respond = respond;
