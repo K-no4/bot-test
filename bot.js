@@ -66,7 +66,7 @@ function respond() {
         this.res.end();
 
       }
-      if (str.find(msg,"hey")){
+      if (msg.find("hey")){
         console.log(true);
       }
       else{
