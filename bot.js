@@ -64,7 +64,7 @@ function respond() {
       }
       if (msg.indexOf("hey")>=0){
         console.log(true);
-           if (msg.indexOf("boss")>=0){
+           if (msg.indexOf("boss",3)>=0){
           this.res.write(200);
           console.log(true);
           postCringe(3);
