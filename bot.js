@@ -67,10 +67,11 @@ function respond() {
       }
       if (msg.includes('Hey','boss')){
         console.log(true);
-      
-      else
+      }
+      else{
         console.log(false);
-    } 
+      }
+    
 
 }
 
