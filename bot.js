@@ -52,7 +52,7 @@ function respond() {
           postCringe(5);
           this.res.end(200);
           break;
-          case 'Destroy Humanity';
+          case 'Destroy Humanity':
           this.res.writeHead(200);
           postCringe(6);
           this.res.end(200);
