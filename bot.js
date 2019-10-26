@@ -16,7 +16,7 @@ function respond() {
           postInfo(1);
           this.res.end();
           break;
-        case '/e':
+        case '/help':
           this.res.writeHead(200);
           postInfo(2);
           this.res.end();
@@ -108,7 +108,7 @@ function postInfo(txt){
     case 3:
     botResponse = 'this is a random test';
     break;
-    
+
     default:
     break;
   }
