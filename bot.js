@@ -3,8 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
-function respond() 
-{
+function respond() {
   var msg, request = JSON.parse(this.req.chunks[0]),
   msg=request.text;
       switch (msg){
@@ -17,6 +16,46 @@ function respond()
           this.res.writeHead(200);
           postHelp();
           this.res.end();
+          break;
+          case '69':
+          this.res.writeHead(200);
+          postCringe(1);
+          this.res.end();
+          break;
+          case 'no':
+          this.res.writeHead(200);
+          postCringe(2);
+          this.res.end();
+          break;
+          case 'Hey boss':
+          this.res.writeHead(200);
+          postCringe(3);
+          this.res.end(200);
+          break;
+          case 'fuck you':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Fuck you':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Fuck You':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Hello':
+          this.res.writeHead(200);
+          postCringe(5);
+          this.res.end(200);
+          break;
+          case 'Destroy Humanity';
+          this.res.writeHead(200);
+          postCringe(6);
+          this.res.end(200);
           break;
         default:
         console.log("unkown response");
@@ -98,12 +137,29 @@ function postHelp(){
   botReq.end(JSON.stringify(body));
 }
 
-function postError(){
-  var botResponse, options, body, botReq;
+function postCringe(txt){
+  var txt, botResponse, options, body, botReq;
 
 
-  botResponse = "Unkown command use /help for list of commands";
-
+    switch (txt)
+    {
+      case 1:
+        botResponse="Nice";
+      break;
+      case 2:
+        botResponse="yes";
+      break;
+      case 3:
+        botResponse="can I habe a pizza please";
+        break;
+      case 4:
+        botResponse="No fuck you.";
+        break;
+      case 5:
+        botResponse="Hello Human";
+      default:
+      break;
+    }
     options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -133,4 +189,52 @@ function postError(){
   });
   botReq.end(JSON.stringify(body));
 }
+/*
+function postImage(txt){
+  var txt, botResponse, options, body, botReq;
+
+
+    switch (txt)
+    {
+      case 1:
+        botResponse="Nice";
+      break;
+      case 2:
+        botResponse="words 2";
+      break;
+      default:
+      break;
+    }
+    options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "image" : botResponse
+  };
+  console.log()
+
+  console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
+*/
+
 exports.respond = respond;
