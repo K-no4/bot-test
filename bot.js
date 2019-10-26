@@ -36,7 +36,7 @@ function respond() {
           postCringe(1);
           this.res.end();
           break;
-        case "hello":
+        case 'hello':
           this.res.writeHead(200);
           postCringe(4);
           this.res.end();
@@ -55,7 +55,7 @@ function respond() {
           console.log(true);
           this.res.writeHead(200);
           postCringe(2);
-          this.res.end(200);
+          this.res.end();
         }
           else{}
       }
@@ -68,7 +68,7 @@ function respond() {
             if (msg.indexOf("no")<0){
             this.res.writeHead(200);
             postCringe(3);
-            this.res.end(200);
+            this.res.end();
           }
             else{}
         }
@@ -82,7 +82,7 @@ function respond() {
           console.log(true);
           this.res.writeHead(200);
           postCringe(5);
-          this.res.end(200);
+          this.res.end();
         }
           else{}
       }
