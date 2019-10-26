@@ -87,7 +87,7 @@ function respond() {
 
 }
 
-function postInfo(){
+function postInfo(txt){
   var botResponse, options, body, botReq, txt;
 
 
