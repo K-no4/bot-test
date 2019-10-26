@@ -7,6 +7,7 @@ function respond() {
   var msg, str, request = JSON.parse(this.req.chunks[0]);
 
   msg=request.text;
+  msg=msg.toLowerCase();
 
   console.log(msg);
       switch (msg){
@@ -30,10 +31,13 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case msg.indexOf('Hey','boss')>=0:
+        case msg.indexOf('hey')>=0:
+        if (msg.indexOf('boss')>0){
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
+        }
+          else{}
           break;
         case 'fuck you':
           this.res.writeHead(200);
