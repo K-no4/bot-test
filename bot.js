@@ -13,12 +13,12 @@ function respond() {
       switch (msg){
         case '/t':
           this.res.writeHead(200);
-          postAnouncement();
+          postInfo(1);
           this.res.end();
           break;
         case "/h":
           this.res.writeHead(200);
-          postHelp();
+          postInfo(2);
           this.res.end(200);
           break;
         case "69":
@@ -87,47 +87,18 @@ function respond() {
 
 }
 
-function postAnouncement(){
-  var botResponse, options, body, botReq;
+function postInfo(){
+  var botResponse, options, body, botReq, txt;
 
 
-  botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
-
-    options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
-
-  console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
-}
-
-function postHelp(){
-  var botResponse, options, body, botReq;
-
-
-  botResponse = 'This bot responds to comands in the format of /{text}\r\n There currently two comands:\r\n /h - gives list of commands\r\n /t - gives information about the latest tournament';
+  switch(txt){  
+    case 1:
+    botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
+    break;
+    case 2:
+    botResponse = 'This bot responds to comands in the format of /{text}\r\n There currently two comands:\r\n /h - gives list of commands\r\n /t - gives information about the latest tournament';
+    break;
+  }
 
     options = {
     hostname: 'api.groupme.com',
