@@ -69,7 +69,7 @@ function postAnouncement(){
   var botResponse, options, body, botReq;
 
 
-  botResponse = "UT-Austin\r\n  https://www.facebook.com/events/392382481673389/";
+  botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
 
     options = {
     hostname: 'api.groupme.com',
@@ -105,7 +105,7 @@ function postHelp(){
   var botResponse, options, body, botReq;
 
 
-  botResponse = "This bot responds to comands in the format of /'text' \r\n There currently two comands: \r\n /help - gives list of commands \r\n /t - gives information about the latest tournament";
+  botResponse = 'This bot responds to comands in the format of /(text) \r\n There currently two comands: \r\n /help - gives list of commands \r\n /t - gives information about the latest tournament';
 
     options = {
     hostname: 'api.groupme.com',
@@ -147,19 +147,19 @@ function postCringe(txt){
         botResponse='Nice';
       break;
       case 2:
-        botResponse="yes";
+        botResponse='yes';
       break;
       case 3:
-        botResponse="can I habe a pizza please";
+        botResponse='can I habe a pizza please';
         break;
       case 4:
-        botResponse="No fuck you.";
+        botResponse='No fuck you';
         break;
       case 5:
-        botResponse="Hello Human";
+        botResponse='Hello Human';
         break;
       case 6:
-        botResponse="Soon";
+        botResponse='Soon';
         break;
       default:
       break;
