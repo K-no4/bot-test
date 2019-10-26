@@ -21,6 +21,11 @@ function respond() {
           postInfo(2);
           this.res.end(200);
           break;
+          case '/e':
+          this.res.writeHead(200);
+          postInfo(3);
+          this.res.end();
+          break;
         case "69":
           this.res.writeHead(200);
           postCringe(1);
@@ -98,6 +103,8 @@ function postInfo(txt){
     case 2:
     botResponse = 'This';
     break;
+    case 3:
+    botResponse = 'this is a random test';
     default:
     break;
   }
