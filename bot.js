@@ -2,7 +2,6 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
-
 function respond() {
   var msg, str, request = JSON.parse(this.req.chunks[0]);
 
@@ -12,12 +11,12 @@ function respond() {
   console.log(dv);
   console.log(msg);
       switch (msg){
-        case "/t":
+        case '/t':
           this.res.writeHead(200);
           postAnouncement();
           this.res.end();
           break;
-        case "/help":
+        case '/h':
           this.res.writeHead(200);
           postHelp();
           this.res.end(200);
@@ -27,7 +26,7 @@ function respond() {
           postCringe(1);
           this.res.end();
           break;
-        case "no":
+        case 'no':
           this.res.writeHead(200);
           postCringe(2);
           this.res.end();
@@ -52,7 +51,6 @@ function respond() {
           this.res.writeHead(200);
           postCringe(3);
           this.res.end(200);
-          msg='';
         }
           else{}
       }
@@ -66,7 +64,6 @@ function respond() {
             this.res.writeHead(200);
             postCringe(4);
             this.res.end(200);
-            msg='';
           }
             else{}
         }
@@ -81,8 +78,6 @@ function respond() {
           this.res.writeHead(200);
           postCringe(6);
           this.res.end(200);
-          msg='';
-
         }
           else{}
       }
@@ -221,3 +216,4 @@ function postCringe(txt){
 }
 
 exports.respond = respond;
+setTimeout(respond(),3000);
