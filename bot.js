@@ -4,8 +4,9 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var msg, request = JSON.parse(this.req.chunks[0]),
+  var msg, request = JSON.parse(this.req.chunks[0]);
   msg=request.text;
+  console.log(msg);
       switch (msg){
         case "/t":
           this.res.writeHead(200);
