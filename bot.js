@@ -2,7 +2,6 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
-setTimeout()
 function respond() {
   var dv, msg, str, request = JSON.parse(this.req.chunks[0]);
 
@@ -17,7 +16,7 @@ function respond() {
           postAnouncement();
           this.res.end();
           break;
-        case '/h':
+        case "/h":
           this.res.writeHead(200);
           postHelp();
           this.res.end(200);
@@ -128,7 +127,7 @@ function postHelp(){
   var botResponse, options, body, botReq;
 
 
-  botResponse = "This bot responds to comands in the format of /(text) \r\n There currently two comands: \r\n /help - gives list of commands \r\n /t - gives information about the latest tournament";
+  botResponse = 'This bot responds to comands in the format of /{text}\r\n There currently two comands:\r\n /h - gives list of commands\r\n /t - gives information about the latest tournament';
 
     options = {
     hostname: 'api.groupme.com',
