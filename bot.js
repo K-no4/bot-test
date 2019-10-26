@@ -28,7 +28,7 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case msg.indexOf('Hey boss'):
+        case 'Hey boss'.search(msg)>-1:
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
