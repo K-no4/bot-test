@@ -7,7 +7,7 @@ function respond() {
   var msg, request = JSON.parse(this.req.chunks[0]),
   msg=request.text;
       switch (msg){
-        case '/t':
+        case "/t":
           this.res.writeHead(200);
           postAnouncement();
           this.res.end();
@@ -105,7 +105,7 @@ function postHelp(){
   var botResponse, options, body, botReq;
 
 
-  botResponse = 'This bot responds to comands in the format of /(text) \r\n There currently two comands: \r\n /help - gives list of commands \r\n /t - gives information about the latest tournament';
+  botResponse = "This bot responds to comands in the format of /(text) \r\n There currently two comands: \r\n /help - gives list of commands \r\n /t - gives information about the latest tournament";
 
     options = {
     hostname: 'api.groupme.com',
