@@ -145,9 +145,7 @@ function postInfo(txt){
 
 function postCringe(txt){
   var txt, botResponse, options, body, botReq;
-const values= switchcase({
-  0: 'Nice', 1: 'yes', 2:'can I habe a pizza please', 3: 'No fuck you', 4: 'Hello Human', 5: 'Soon'}) 
-const getBotResponse=()=> values(txt) const botResponse=getBotResponse()
+const values= switchcase({ 0: 'Nice', 1: 'yes', 2:'can I habe a pizza please', 3: 'No fuck you', 4: 'Hello Human', 5: 'Soon'})('unknown') const getBotResponse=()=> values(txt) const botResponse=getBotResponse()
 
 
     options = {
