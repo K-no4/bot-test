@@ -151,21 +151,26 @@ function postCringe(txt){
       case 1:
         botResponse="Nice";
       break;
+
       case 2:
         botResponse="yes";
       break;
+
       case 3:
         botResponse="can I habe a pizza please";
         break;
+
       case 4:
         botResponse="No fuck you";
         break;
+
       case 5:
       botResponse='Hello Human';
-      break;
+
       case 6:
         botResponse="Soon";
         break;
+
       default:
       break;
     }
