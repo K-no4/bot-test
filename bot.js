@@ -28,18 +28,18 @@ function respond() {
           break;
         case "69":
           this.res.writeHead(200);
-          postCringe(1);
+          postCringe(0);
           this.res.end();
           break;
         case "no":
           this.res.writeHead(200);
-          postCringe(2);
+          postCringe(1);
           this.res.end();
           break;
         case "hello":
           this.res.writeHead(200);
-          postCringe(7);
-          this.res.end(200);
+          postCringe(4);
+          this.res.end();
           break;
         default:
         console.log("unkown response");
@@ -145,38 +145,10 @@ function postInfo(txt){
 
 function postCringe(txt){
   var txt, botResponse, options, body, botReq;
+const values= switchcase({
+  0: 'Nice', 1: 'yes', 2:'can I habe a pizza please', 3: 'No fuck you', 4: 'Hello Human', 5: 'Soon'}) 
+const getBotResponse=()=> values(txt) const botResponse=getBotResponse()
 
-    switch (txt)
-    {
-      case 1:
-        botResponse="Nice";
-      break;
-
-      case 2:
-        botResponse="yes";
-      break;
-
-      case 3:
-        botResponse="can I habe a pizza please";
-        break;
-
-      case 4:
-        botResponse="No fuck you";
-        break;
-
-      case 5:
-      botResponse='Hello Human';
-      break;
-
-      case 6:
-        botResponse="Soon";
-        break;
-      case 7:
-        botResponse="HELLO HUMAN";
-        break;
-      default:
-      break;
-    }
 
     options = {
     hostname: 'api.groupme.com',
