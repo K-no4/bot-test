@@ -31,14 +31,6 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case msg.indexOf('hey')>=0:
-        if (msg.indexOf('boss')>=0){
-          this.res.write(200);
-          postCringe(3);
-          this.res.end(200);
-        }
-          else{}
-          break;
         case 'fuck you':
           this.res.writeHead(200);
           postCringe(4);
@@ -72,7 +64,7 @@ function respond() {
       }
       if (msg.indexOf("hey")>=0){
         console.log(true);
-           if (msg.indexOf('boss')>=0){
+           if (msg.indexOf("boss")>=0){
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
