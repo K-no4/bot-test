@@ -26,6 +26,37 @@ function respond() {
           this.res.writeHead(200);
           postCringe(2);
           this.res.end();
+          break;
+          case 'Hey boss':
+          this.res.writeHead(200);
+          postCringe(3);
+          this.res.end(200);
+          break;
+          case 'fuck you':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Fuck you':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Fuck You':
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+          break;
+          case 'Hello':
+          this.res.writeHead(200);
+          postCringe(5);
+          this.res.end(200);
+          break;
+          case 'Destroy Humanity';
+          this.res.writeHead(200);
+          postCringe(6);
+          this.res.end(200);
+          break;
         default:
         console.log("unkown response");
         this.res.writeHead(200);
@@ -116,8 +147,20 @@ function postCringe(txt){
         botResponse="Nice";
       break;
       case 2:
-        botResponse="words 2";
+        botResponse="yes";
       break;
+      case 3:
+        botResponse="can I habe a pizza please";
+        break;
+      case 4:
+        botResponse="No fuck you.";
+        break;
+      case 5:
+        botResponse="Hello Human";
+        break;
+      case 6:
+        botResponse="Soon";
+        break;
       default:
       break;
     }
