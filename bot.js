@@ -7,8 +7,9 @@ function respond() {
   var msg, str, request = JSON.parse(this.req.chunks[0]);
 
   msg=request.text;
+  dv=request.userid;
   msg=msg.toLowerCase();
-
+  console.log(dv);
   console.log(msg);
       switch (msg){
         case "/t":
@@ -61,10 +62,13 @@ function respond() {
         console.log(true);
            if (msg.indexOf("you")>=0){
           console.log(true);
-          this.res.writeHead(200);
-          postCringe(4);
-          this.res.end(200);
-          msg='';
+            if (msg.indexOf("no")<0){
+            this.res.writeHead(200);
+            postCringe(4);
+            this.res.end(200);
+            msg='';
+          }
+            else{}
         }
           else{}
       }
