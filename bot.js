@@ -19,7 +19,7 @@ function respond() {
         case "/help":
           this.res.writeHead(200);
           postHelp();
-          this.res.end();
+          this.res.end(200);
           break;
         case "69":
           this.res.writeHead(200);
@@ -51,6 +51,7 @@ function respond() {
           this.res.writeHead(200);
           postCringe(3);
           this.res.end(200);
+          msg='';
         }
           else{}
       }
@@ -63,6 +64,7 @@ function respond() {
           this.res.writeHead(200);
           postCringe(4);
           this.res.end(200);
+          msg='';
         }
           else{}
       }
@@ -75,6 +77,7 @@ function respond() {
           this.res.writeHead(200);
           postCringe(6);
           this.res.end(200);
+          msg='';
 
         }
           else{}
