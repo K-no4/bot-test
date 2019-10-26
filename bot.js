@@ -16,25 +16,30 @@ function respond() {
           postInfo(1);
           this.res.end();
           break;
-        case "/h":
+        case '/help':
           this.res.writeHead(200);
           postInfo(2);
-          this.res.end(200);
+          this.res.end();
+          break;
+        case '/e':
+          this.res.writeHead(200);
+          postInfo(3);
+          this.res.end();
           break;
         case "69":
+          this.res.writeHead(200);
+          postCringe(0);
+          this.res.end();
+          break;
+        case "no":
           this.res.writeHead(200);
           postCringe(1);
           this.res.end();
           break;
-        case 'no':
-          this.res.writeHead(200);
-          postCringe(2);
-          this.res.end();
-          break;
         case 'hello':
           this.res.writeHead(200);
-          postCringe(5);
-          this.res.end(200);
+          postCringe(4);
+          this.res.end();
           break;
         default:
         console.log("unkown response");
@@ -49,8 +54,8 @@ function respond() {
            if (msg.indexOf("boss")>=0){
           console.log(true);
           this.res.writeHead(200);
-          postCringe(3);
-          this.res.end(200);
+          postCringe(2);
+          this.res.end();
         }
           else{}
       }
@@ -62,8 +67,8 @@ function respond() {
           console.log(true);
             if (msg.indexOf("no")<0){
             this.res.writeHead(200);
-            postCringe(4);
-            this.res.end(200);
+            postCringe(3);
+            this.res.end();
           }
             else{}
         }
@@ -76,8 +81,8 @@ function respond() {
            if (msg.indexOf("humanity")>=0){
           console.log(true);
           this.res.writeHead(200);
-          postCringe(6);
-          this.res.end(200);
+          postCringe(5);
+          this.res.end();
         }
           else{}
       }
@@ -95,8 +100,16 @@ function postInfo(txt){
     case 1:
     botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
     break;
+
     case 2:
-    botResponse = 'This bot responds to comands in the format of /{text}\r There currently two comands:\r /h - gives list of commands\r /t - gives information about the latest tournament';
+    botResponse = 'there are currently 2 commands:\r\n /t - gives info on club events/tournaments \r\n /help - gives help about using the bot';
+    break;
+
+    case 3:
+    botResponse = 'this is a random test';
+    break;
+
+    default:
     break;
   }
 
@@ -132,30 +145,36 @@ function postInfo(txt){
 
 function postCringe(txt){
   var txt, botResponse, options, body, botReq;
-
     switch (txt)
     {
-      case 1:
+      case 0:
         botResponse="Nice";
       break;
-      case 2:
+
+      case 1:
         botResponse="yes";
       break;
-      case 3:
+
+      case 2:
         botResponse="can I habe a pizza please";
         break;
-      case 4:
+
+      case 3:
         botResponse="No fuck you";
         break;
+
+      case 4:
+      botResponse='Hello Human';
+      break;
+
       case 5:
-        botResponse="Hello Human";
-        break;
-      case 6:
         botResponse="Soon";
         break;
+
       default:
       break;
     }
+
     options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
