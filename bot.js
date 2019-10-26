@@ -16,7 +16,7 @@ function respond() {
           postInfo(1);
           this.res.end();
           break;
-        case "/h":
+        case '/h':
           this.res.writeHead(200);
           postInfo(2);
           this.res.end(200);
