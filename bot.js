@@ -31,12 +31,12 @@ function respond() {
           postCringe(1);
           this.res.end();
           break;
-        case 'no':
+        case "no":
           this.res.writeHead(200);
           postCringe(2);
           this.res.end();
           break;
-        case 'hello':
+        case "hello":
           this.res.writeHead(200);
           postCringe(5);
           this.res.end(200);
@@ -166,6 +166,7 @@ function postCringe(txt){
 
       case 5:
       botResponse='Hello Human';
+      break;
 
       case 6:
         botResponse="Soon";
@@ -174,6 +175,7 @@ function postCringe(txt){
       default:
       break;
     }
+
     options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
