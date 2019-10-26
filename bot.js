@@ -96,7 +96,7 @@ function postInfo(txt){
     botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
     break;
     case 2:
-    botResponse = 'This bot responds to comands in the format of "/text" There currently two comands: "/h"  gives list of commands "/t"  gives information about the latest tournament';
+    botResponse = 'This';
     break;
     default:
     break;
