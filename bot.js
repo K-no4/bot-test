@@ -5,6 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var msg, request = JSON.parse(this.req.chunks[0]);
+
   msg=request.text;
 
   console.log(msg);
@@ -65,7 +66,7 @@ function respond() {
         this.res.end();
 
       }
-      if (msg.contains('Hey','boss')){
+      if (string.find(msg,"hey")){
         console.log(true);
       }
       else{
