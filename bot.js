@@ -161,8 +161,8 @@ function postCringe(txt){
         botResponse="No fuck you";
         break;
       case 5:
-        botResponse="Hello Human";
-        break;
+      botResponse='Hello Human';
+      break;
       case 6:
         botResponse="Soon";
         break;
