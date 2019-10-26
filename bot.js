@@ -2,8 +2,9 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
+setTimeout()
 function respond() {
-  var msg, str, request = JSON.parse(this.req.chunks[0]);
+  var dv, msg, str, request = JSON.parse(this.req.chunks[0]);
 
   msg=request.text;
   dv=request.userid;
@@ -216,4 +217,3 @@ function postCringe(txt){
 }
 
 exports.respond = respond;
-setTimeout(respond(),3000);
