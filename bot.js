@@ -65,7 +65,7 @@ function respond() {
         this.res.end();
 
       }
-      if (msg.includes('Hey','boss')){
+      if (msg.contains('Hey','boss')){
         console.log(true);
       }
       else{
