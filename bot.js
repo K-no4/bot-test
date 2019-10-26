@@ -38,7 +38,7 @@ function respond() {
           break;
         case "hello":
           this.res.writeHead(200);
-          postCringe(5);
+          postCringe(7);
           this.res.end(200);
           break;
         default:
@@ -171,7 +171,9 @@ function postCringe(txt){
       case 6:
         botResponse="Soon";
         break;
-
+      case 7:
+        botResponse="HELLO HUMAN";
+        break;
       default:
       break;
     }
