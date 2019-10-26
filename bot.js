@@ -31,29 +31,9 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case 'fuck you':
-          this.res.writeHead(200);
-          postCringe(4);
-          this.res.end(200);
-          break;
-        case 'Fuck you':
-          this.res.writeHead(200);
-          postCringe(4);
-          this.res.end(200);
-          break;
-        case 'Fuck You':
-          this.res.writeHead(200);
-          postCringe(4);
-          this.res.end(200);
-          break;
-        case 'Hello':
+        case 'hello':
           this.res.writeHead(200);
           postCringe(5);
-          this.res.end(200);
-          break;
-        case 'Destroy Humanity':
-          this.res.writeHead(200);
-          postCringe(6);
           this.res.end(200);
           break;
         default:
@@ -62,6 +42,8 @@ function respond() {
         this.res.end();
 
       }
+
+
       if (msg.indexOf("hey")>=0){
         console.log(true);
            if (msg.indexOf("boss",3)>=0){
@@ -69,14 +51,37 @@ function respond() {
           this.res.writeHead(200);
           postCringe(3);
           this.res.end(200);
+        }
+          else{}
+      }
+      else{}
+    
+      if (msg.indexOf("fuck")>=0){
+        console.log(true);
+           if (msg.indexOf("you",3)>=0){
+          console.log(true);
+          this.res.writeHead(200);
+          postCringe(4);
+          this.res.end(200);
+        }
+          else{}
+      }
+      else{} 
+
+      if (msg.indexOf("destroy")>=0){
+        console.log(true);
+           if (msg.indexOf("humanity",3)>=0){
+          console.log(true);
+          this.res.writeHead(200);
+          postCringe(6);
+          this.res.end(200);
 
         }
-        else{}
+          else{}
       }
       else{
         console.log(false);
-      }
-    
+      }   
 
 }
 
