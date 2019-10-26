@@ -32,7 +32,7 @@ function respond() {
           this.res.end();
           break;
         case msg.indexOf('hey')>=0:
-        if (msg.indexOf('boss')>0){
+        if (msg.indexOf('boss')>=0){
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
@@ -72,6 +72,12 @@ function respond() {
       }
       if (msg.indexOf("hey")>=0){
         console.log(true);
+           if (msg.indexOf('boss')>=0){
+          this.res.write(200);
+          postCringe(3);
+          this.res.end(200);
+        }
+        else{}
       }
       else{
         console.log(false);
