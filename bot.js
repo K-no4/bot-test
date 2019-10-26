@@ -66,7 +66,7 @@ function respond() {
         this.res.end();
 
       }
-      if (msg.find("hey")){
+      if (msg.indexOf("hey")>=0){
         console.log(true);
       }
       else{
