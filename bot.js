@@ -54,7 +54,7 @@ function respond() {
            if (msg.indexOf("boss")>=0){
           console.log(true);
           this.res.writeHead(200);
-          postCringe(3);
+          postCringe(2);
           this.res.end(200);
         }
           else{}
@@ -67,7 +67,7 @@ function respond() {
           console.log(true);
             if (msg.indexOf("no")<0){
             this.res.writeHead(200);
-            postCringe(4);
+            postCringe(3);
             this.res.end(200);
           }
             else{}
@@ -81,7 +81,7 @@ function respond() {
            if (msg.indexOf("humanity")>=0){
           console.log(true);
           this.res.writeHead(200);
-          postCringe(6);
+          postCringe(5);
           this.res.end(200);
         }
           else{}
@@ -145,8 +145,35 @@ function postInfo(txt){
 
 function postCringe(txt){
   var txt, botResponse, options, body, botReq;
-const values= switchcase({ 0: 'Nice', 1: 'yes', 2:'can I habe a pizza please', 3: 'No fuck you', 4: 'Hello Human', 5: 'Soon'})('unknown') const getBotResponse=()=> values(txt) const botResponse=getBotResponse()
+    switch (txt)
+    {
+      case 0:
+        botResponse="Nice";
+      break;
 
+      case 1:
+        botResponse="yes";
+      break;
+
+      case 2:
+        botResponse="can I habe a pizza please";
+        break;
+
+      case 3:
+        botResponse="No fuck you";
+        break;
+
+      case 4:
+      botResponse='Hello Human';
+      break;
+
+      case 5:
+        botResponse="Soon";
+        break;
+
+      default:
+      break;
+    }
 
     options = {
     hostname: 'api.groupme.com',
