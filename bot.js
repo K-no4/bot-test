@@ -6,6 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var msg, request = JSON.parse(this.req.chunks[0]);
   msg=request.text;
+
   console.log(msg);
       switch (msg){
         case "/t":
@@ -28,7 +29,7 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case 'Hey boss'.search(msg)>-1:
+        case msg.includes('Hey','boss'):
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
