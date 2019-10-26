@@ -4,7 +4,7 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var msg, request = JSON.parse(this.req.chunks[0]);
+  var msg, str, request = JSON.parse(this.req.chunks[0]);
 
   msg=request.text;
 
@@ -66,7 +66,7 @@ function respond() {
         this.res.end();
 
       }
-      if (string.find(msg,"hey")){
+      if (str.find(msg,"hey")){
         console.log(true);
       }
       else{
