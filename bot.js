@@ -46,7 +46,7 @@ function respond() {
 
       if (msg.indexOf("hey")>=0){
         console.log(true);
-           if (msg.indexOf("boss",3)>=0){
+           if (msg.indexOf("boss")>=0){
           console.log(true);
           this.res.writeHead(200);
           postCringe(3);
@@ -58,7 +58,7 @@ function respond() {
     
       if (msg.indexOf("fuck")>=0){
         console.log(true);
-           if (msg.indexOf("you",3)>=0){
+           if (msg.indexOf("you")>=0){
           console.log(true);
           this.res.writeHead(200);
           postCringe(4);
@@ -70,7 +70,7 @@ function respond() {
 
       if (msg.indexOf("destroy")>=0){
         console.log(true);
-           if (msg.indexOf("humanity",3)>=0){
+           if (msg.indexOf("humanity")>=0){
           console.log(true);
           this.res.writeHead(200);
           postCringe(6);
