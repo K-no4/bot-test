@@ -157,6 +157,10 @@ function postCringe(txt){
         break;
       case 5:
         botResponse="Hello Human";
+        break;
+      case 6:
+        botResponse="Soon";
+        break;
       default:
       break;
     }
