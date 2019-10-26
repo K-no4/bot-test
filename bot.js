@@ -29,7 +29,7 @@ function respond() {
           postCringe(2);
           this.res.end();
           break;
-        case (msg.includes('Hey','boss')>=0):
+        case (msg.indexOf('Hey','boss')>=0):
           this.res.write(200);
           postCringe(3);
           this.res.end(200);
