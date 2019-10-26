@@ -28,7 +28,7 @@ function respond() {
           this.res.end();
           break;
         case "Hey boss":
-          this.res.write(response.statusCode.toString(200));
+          this.res.write(res.statusCode.toString(200));
           postCringe(3);
           this.res.end(200);
           break;
