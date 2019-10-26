@@ -16,12 +16,12 @@ function respond() {
           postInfo(1);
           this.res.end();
           break;
-        case '/h':
+        case '/e':
           this.res.writeHead(200);
           postInfo(2);
-          this.res.end(200);
+          this.res.end();
           break;
-          case '/e':
+        case '/e':
           this.res.writeHead(200);
           postInfo(3);
           this.res.end();
@@ -100,11 +100,15 @@ function postInfo(txt){
     case 1:
     botResponse = 'UT-Austin\r\n  https://www.facebook.com/events/392382481673389/';
     break;
+
     case 2:
-    botResponse = 'This';
+    botResponse = 'there are currently 2 commands:\r\n /t - gives info on club events/tournaments \r\n /help - gives help about using the bot';
     break;
+
     case 3:
     botResponse = 'this is a random test';
+    break;
+    
     default:
     break;
   }
