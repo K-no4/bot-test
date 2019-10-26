@@ -66,8 +66,10 @@ function respond() {
         console.log(true);
            if (msg.indexOf("boss")>=0){
           this.res.write(200);
+          console.log(true);
           postCringe(3);
           this.res.end(200);
+
         }
         else{}
       }
