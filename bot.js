@@ -61,30 +61,11 @@ function respond() {
       }
       else{}
     
-      if (msg.indexOf("fuck")>=0){
-        console.log(true);
-           if (msg.indexOf("you")>=0){
-          console.log(true);
-            if (msg.indexOf("no")<0){
-            this.res.writeHead(200);
-            postCringe(3);
-            this.res.end();
-          }
-            else{}
         }
           else{}
       }
       else{} 
 
-      if (msg.indexOf("destroy")>=0){
-        console.log(true);
-           if (msg.indexOf("humanity")>=0){
-          console.log(true);
-          this.res.writeHead(200);
-          postCringe(5);
-          this.res.end();
-        }
-          else{}
       }
       else{
         console.log(false);
@@ -158,16 +139,12 @@ function postCringe(txt){
       case 2:
         botResponse="can I habe a pizza please";
         break;
-
+       
       case 3:
-        botResponse="No fuck you";
-        break;
-
-      case 4:
       botResponse='Hello Human';
       break;
 
-      case 5:
+      case 4:
         botResponse="Soon";
         break;
 
