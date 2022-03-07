@@ -26,11 +26,6 @@ function respond() {
           postInfo(3);
           this.res.end();
           break;
-        case "69":
-          this.res.writeHead(200);
-          postCringe(0);
-          this.res.end();
-          break;
         case "no":
           this.res.writeHead(200);
           postCringe(1);
